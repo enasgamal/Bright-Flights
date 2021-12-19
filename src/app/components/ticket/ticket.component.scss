@@ -1,0 +1,52 @@
+$primary-color:#1C5684;
+$secondry-color:#fff;
+
+.container{
+    .card{
+        width: 400px !important;
+
+        .card-header{
+            background-color: $primary-color;
+            color: $secondry-color;
+        }
+        .contain {
+            position: relative;
+            text-align: center;
+            color: $secondry-color;
+            background: black;
+            overflow: hidden;
+        
+            img{
+                opacity: 0.9;
+                height: 200px;
+            }
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+          }
+          .card-body{
+              .list-group{
+                display: contents;
+              }
+              .h6-header {
+                font-size: 0.9rem;
+                font-weight: 400;
+              }
+              fa-icon{
+                  color: $primary-color;
+              }
+          }
+          .card-footer{
+              background-color: $primary-color;
+              .btn-primary{
+                background-color: $primary-color;
+                border:$primary-color;
+                box-shadow: none;
+              }
+          }
+         
+    }
+}

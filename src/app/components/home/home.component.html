@@ -1,0 +1,14 @@
+<div class="container p-5">
+    <search [sources]="sources" [destinations]="destinations" (onSubmitClick)="searchHandler($event)"
+        (getAllTrips)="getAllTripsData()"></search>
+    <div class="row" *ngIf="filteredFlights[0]">
+        <div class="col-md-3 mb-4" *ngFor="let flight of filteredFlights[0]">
+            <card [flight]="flight"></card>
+        </div>
+    </div>
+    <div class="row" *ngIf="!filteredFlights[0]">
+        <div class="col-md-3 mb-4" *ngFor="let flight of flights[0]">
+            <card [flight]="flight"></card>
+        </div>
+    </div>
+</div>

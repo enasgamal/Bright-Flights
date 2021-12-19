@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-11">
+        <form [formGroup]="filterForm" (ngSubmit)="searchBySource(inputSrc.value, inputDest.value )">
+            <div class="row mt-2 my-5">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <label class="my-3">{{'Source' | translate}}</label> -->
+                            <select class="form-select" #inputSrc formControlName="srcName">
+                                <option value="">{{'Choose Your Trip' | translate}}</option>
+                                <option *ngFor="let src of sources" value="{{src}}">{{src}}</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-6">
+                            <!-- <label class="my-3"> {{'Destination' | translate}}</label> -->
+                            <select class="form-select" #inputDest formControlName="destName">
+                                <option value="">{{'To Airport' | translate}}</option>
+                                <option *ngFor="let dest of destinations" value="{{dest}}">{{dest}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100 mx-2" [disabled]="!filterForm.valid">{{'Search' |
+                        translate}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-primary mt-2 w-100" (click)="getAllFlights()">{{'All' | translate}}</button>
+    </div>
+</div>

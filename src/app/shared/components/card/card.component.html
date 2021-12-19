@@ -1,0 +1,23 @@
+<div class="card h-100 shadow-sm">
+    <div class="text-center">
+        <div class="img-hover-zoom img-hover-zoom--colorize">
+            <img class="shadow" [src]="flight.img" alt="Another Image zoom-on-hover effect">
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="clearfix mb-3">
+        </div>
+        <div class="my-1 text-center">
+            <h6>{{flight.source}} - {{flight.destination}}</h6>
+        </div>
+        <div class="mb-3">
+            <h2 class="text-uppercase text-center role">جنيه{{flight.cost}} </h2>
+        </div>
+        <div class="card-footer">
+            <div class="text-center">
+                <button class="btn btn-primary w-100" [routerLink]="['/trips', flight.id]">
+                    {{'Purchase Now' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</div>
